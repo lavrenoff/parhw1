@@ -6,8 +6,14 @@ def sort_list_imperative(numbers):
     for i in range(n):
         for j in range(0,n-i-1):
             if numbers[j] < numbers[j+1]:
-                numbers[j], numbers[j+1]=numbers[j+1], numbers[j]
+                numbers[j], numbers[j+1] = numbers[j+1], numbers[j]
+    return(numbers)            
 
-numbers=[10,89,96,36,95,47,1,2,36]                
+def sort_list_declarative(numbers):
+    return sorted(numbers, reverse=True)                
+
+numbers = [10,89,96,36,95,47,1,2,36]                
 
 print('Сортировка по убыванию в императивном стиле:',sort_list_imperative(numbers))
+print('Сортировка по убыванию в декларативном стиле:',sort_list_declarative(numbers))
+
